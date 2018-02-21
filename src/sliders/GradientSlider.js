@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
-    shadowOpacity: 0.1
+    shadowOpacity: 0.1,
+    borderWidth: 1,
+    borderColor: 'white'
   },
   gradient: {
     position: 'absolute',
