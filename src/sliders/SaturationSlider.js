@@ -21,7 +21,7 @@ const SaturationSlider = ({
       step={0.01}
       maximumValue={1}
       value={value}
-      thumbTintColor={tinycolor({ ...color, s: value }).toHslString()}
+      thumbTintColor={tinycolor({ ...color, s: (1.0 -value) }).toHslString()}
       onValueChange={onValueChange}
     />
   );
