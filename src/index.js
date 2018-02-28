@@ -10,4 +10,4 @@ export { default as GradientSlider } from './sliders/GradientSlider';
 export { default as HueSlider } from './sliders/HueSlider';
 export { default as SaturationSlider } from './sliders/SaturationSlider';
 export { default as LightnessSlider } from './sliders/LightnessSlider';
-export { default as ValueSlider } from './gradients/ValueSlider';
+export { default as ValueSlider } from './sliders/ValueSlider';
