@@ -15,7 +15,7 @@ class SaturationGradient extends Component {
     return false;
   }
 
-  getStepColor = i => tinycolor({ ...this.props.color, s: i }).toHslString();
+  getStepColor = i => tinycolor({ ...this.props.color, s: (1.0 - i) }).toHslString();
 
   render() {
     const { style, color, gradientSteps } = this.props;
