@@ -34,7 +34,7 @@ SaturationSlider.propTypes = {
   color: PropTypes.shape({
     h: PropTypes.number.isRequired,
     s: PropTypes.number.isRequired,
-    l: PropTypes.number.isRequired
+    v: PropTypes.number.isRequired
   }).isRequired,
   onValueChange: PropTypes.func.isRequired,
   gradientSteps: PropTypes.number.isRequired
