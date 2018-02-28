@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import tinycolor from 'tinycolor2';
 import Gradient from './Gradient';
 
-class SaturationGradient extends Component {
+class ValueGradient extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (this.props.color.h !== nextProps.color.h) {
       return true;
     }
-    if (this.props.color.l !== nextProps.color.l) {
+    if (this.props.color.s !== nextProps.color.s) {
       return true;
     }
     return false;
   }
 
-  getStepColor = i => tinycolor({ ...this.props.color, s: i }).toHslString();
+  getStepColor = i => tinycolor({ ...this.props.color, v: i }).toHslString();
 
   render() {
     const { style, color, gradientSteps } = this.props;
@@ -30,9 +30,9 @@ class SaturationGradient extends Component {
   }
 }
 
-export default SaturationGradient;
+export default ValueGradient;
 
-SaturationGradient.propTypes = {
+ValueGradient.propTypes = {
   color: PropTypes.shape({
     h: PropTypes.number.isRequired,
     s: PropTypes.number.isRequired,
