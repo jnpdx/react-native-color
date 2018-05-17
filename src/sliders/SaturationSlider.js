@@ -10,7 +10,8 @@ const SaturationSlider = ({
   value,
   color,
   onValueChange,
-  gradientSteps
+  gradientSteps,
+  onSlidingStart, onSlidingComplete
 }) => {
   return (
     <GradientSlider
@@ -23,6 +24,8 @@ const SaturationSlider = ({
       value={value}
       thumbTintColor={tinycolor({ ...color, s: (1.0 -value) }).toHslString()}
       onValueChange={onValueChange}
+	  onSlidingStart={onSlidingStart}
+	  onSlidingComplete={onSlidingComplete}
     />
   );
 };
